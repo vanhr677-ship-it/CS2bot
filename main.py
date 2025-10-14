@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Telegram бот для CS2 турніру
 Функції: реєстрація, розсилка, розіграші, посилання на групу
@@ -961,4 +962,5 @@ def main():
     application.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
+
     main()
