@@ -20,7 +20,6 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
-from keep_alive import keep_alive
 
 # Налаштування логування
 logging.basicConfig(
@@ -905,7 +904,6 @@ async def giveaway(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     """Головна функція"""
-    keep_alive()
 
     application = Application.builder().token(BOT_TOKEN).build()
 
@@ -964,4 +962,5 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
