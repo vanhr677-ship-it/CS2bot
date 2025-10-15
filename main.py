@@ -29,10 +29,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ============= НАЛАШТУВАННЯ =============
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_IDS = [int(os.getenv("ADMIN_ID"))]
-GROUP_LINK = os.getenv("GROUP_LINK")
-CHANNEL_LINK = os.getenv("CHANNEL_LINK")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8429851174:AAFgYXpsRSmJcYBYswjTc8Ni__oNZ_nJY-g")
+ADMIN_IDS = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "7937123770").split(",")]
+GROUP_LINK = os.getenv("GROUP_LINK", "https://t.me/cs2_WPL")
+CHANNEL_LINK = os.getenv("CHANNEL_LINK", "https://t.me/your_channel")
 # ===========================================
 
 # Стани для реєстрації
@@ -962,6 +962,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
