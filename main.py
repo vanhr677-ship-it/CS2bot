@@ -28,12 +28,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ============= НАЛАШТУВАННЯ (ЗМІНІТЬ ЦІ ЗНАЧЕННЯ) =============
-BOT_TOKEN = "8429851174:AAFgYXpsRSmJcYBYswjTc8Ni__oNZ_nJY-g"  # Отримайте від @BotFather
-ADMIN_IDS = [7937123770]  # Ваш Telegram ID (можна кілька)
-GROUP_LINK = "https://t.me/cs2_WPL"  # Посилання на вашу групу
-CHANNEL_LINK = "https://t.me/your_channel"  # Посилання на канал (опціонально)
-# ==============================================================
+# ============= НАЛАШТУВАННЯ =============
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8429851174:AAFgYXpsRSmJcYBYswjTc8Ni__oNZ_nJY-g")
+ADMIN_IDS = [int(x.strip()) for x in os.getenv("ADMIN_IDS", "7937123770").split(",")]
+GROUP_LINK = os.getenv("GROUP_LINK", "https://t.me/cs2_WPL")
+# ===========================================
 
 # Стани для реєстрації
 (TEAM_NAME, TEAM_TAG, 
@@ -962,5 +961,6 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
