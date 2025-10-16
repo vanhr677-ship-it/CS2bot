@@ -20,6 +20,7 @@ from telegram.ext import (
     ContextTypes,
     filters,
 )
+from telegram.ext import Updater
 
 # Налаштування логування
 logging.basicConfig(
@@ -962,6 +963,7 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
 
 
